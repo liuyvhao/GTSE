@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.witfrog.gtse.widget.ContainsEmojiEditText xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/et_search"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/size_40"
+    android:background="@drawable/bg_gray_stroke24"
+    android:drawableLeft="@drawable/ic_search"
+    android:drawablePadding="@dimen/size_8"
+    android:gravity="center_vertical"
+    android:hint="@string/search"
+    android:imeOptions="actionSearch"
+    android:paddingLeft="@dimen/size_16"
+    android:paddingRight="@dimen/size_16"
+    android:singleLine="true"
+    android:textColor="@android:color/white"
+    android:textSize="@dimen/font_14" />

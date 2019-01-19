@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/iv_mine"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/size_135"
+        android:layout_marginLeft="@dimen/size_16"
+        android:layout_marginTop="@dimen/size_16"
+        android:layout_marginRight="@dimen/size_16"
+        android:scaleType="centerInside"
+        android:src="@drawable/bg_mine"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/iv_message"
+        android:layout_width="@dimen/size_24"
+        android:layout_height="0dp"
+        android:layout_marginTop="@dimen/size_8"
+        android:layout_marginRight="@dimen/size_8"
+        android:scaleType="centerInside"
+        android:src="@drawable/ic_message"
+        app:layout_constraintDimensionRatio="1"
+        app:layout_constraintRight_toLeftOf="@+id/iv_setting"
+        app:layout_constraintTop_toTopOf="@+id/iv_mine" />
+
+    <ImageView
+        android:id="@+id/iv_setting"
+        android:layout_width="@dimen/size_24"
+        android:layout_height="0dp"
+        android:layout_marginTop="@dimen/size_8"
+        android:layout_marginRight="@dimen/size_8"
+        android:scaleType="centerInside"
+        android:src="@drawable/ic_setting"
+        app:layout_constraintDimensionRatio="1"
+        app:layout_constraintRight_toRightOf="@+id/iv_mine"
+        app:layout_constraintTop_toTopOf="@+id/iv_mine" />
+
+    <ImageView
+        android:id="@+id/iv_avatar"
+        android:layout_width="@dimen/size_64"
+        android:layout_height="@dimen/size_64"
+        android:src="@drawable/ic_avatar_white"
+        app:layout_constraintBottom_toTopOf="@+id/tv_phone"
+        app:layout_constraintLeft_toLeftOf="@+id/iv_mine"
+        app:layout_constraintRight_toRightOf="@+id/iv_mine"
+        app:layout_constraintTop_toTopOf="@+id/iv_mine"
+        app:layout_constraintVertical_chainStyle="packed" />
+
+    <TextView
+        android:id="@+id/tv_phone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/size_8"
+        android:textColor="@color/white"
+        android:textSize="@dimen/font_16"
+        app:layout_constraintBottom_toBottomOf="@+id/iv_mine"
+        app:layout_constraintLeft_toLeftOf="@+id/iv_mine"
+        app:layout_constraintRight_toRightOf="@+id/iv_mine"
+        app:layout_constraintTop_toBottomOf="@+id/iv_avatar" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginLeft="@dimen/size_16"
+        android:layout_marginRight="@dimen/size_16"
+        android:background="@color/white"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_about_us"
+        app:layout_constraintTop_toTopOf="@+id/tv_my_integral" />
+
+    <TextView
+        android:id="@+id/tv_my_integral"
+        style="@style/MineItemStyle"
+        android:layout_marginTop="@dimen/size_16"
+        android:text="@string/my_integral"
+        app:layout_constraintTop_toBottomOf="@+id/iv_mine" />
+
+    <TextView
+        android:id="@+id/tv_integral"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="@dimen/size_40"
+        android:textColor="@color/light_black2"
+        android:textSize="@dimen/font_14"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_my_integral"
+        app:layout_constraintRight_toRightOf="@+id/tv_my_integral"
+        app:layout_constraintTop_toTopOf="@+id/tv_my_integral" />
+
+    <View
+        android:id="@+id/view_divider1"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/divider"
+        android:layout_marginLeft="@dimen/size_32"
+        android:layout_marginRight="@dimen/size_32"
+        android:background="@color/divider"
+        app:layout_constraintTop_toBottomOf="@+id/tv_my_integral" />
+
+    <TextView
+        android:id="@+id/tv_order_management"
+        style="@style/MineItemStyle"
+        android:text="@string/order_management"
+        app:layout_constraintTop_toBottomOf="@+id/view_divider1" />
+
+    <View
+        android:id="@+id/view_divider2"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/divider"
+        android:layout_marginLeft="@dimen/size_32"
+        android:layout_marginRight="@dimen/size_32"
+        android:background="@color/divider"
+        app:layout_constraintTop_toBottomOf="@+id/tv_order_management" />
+
+    <TextView
+        android:id="@+id/tv_address_book"
+        style="@style/MineItemStyle"
+        android:text="@string/address_book"
+        app:layout_constraintTop_toBottomOf="@+id/view_divider2" />
+
+    <View
+        android:id="@+id/view_divider3"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/divider"
+        android:layout_marginLeft="@dimen/size_32"
+        android:layout_marginRight="@dimen/size_32"
+        android:background="@color/divider"
+        app:layout_constraintTop_toBottomOf="@+id/tv_address_book" />
+
+    <TextView
+        android:id="@+id/tv_security_center"
+        style="@style/MineItemStyle"
+        android:text="@string/security_center"
+        app:layout_constraintTop_toBottomOf="@+id/view_divider3" />
+
+    <View
+        android:id="@+id/view_divider4"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/divider"
+        android:layout_marginLeft="@dimen/size_32"
+        android:layout_marginRight="@dimen/size_32"
+        android:background="@color/divider"
+        app:layout_constraintTop_toBottomOf="@+id/tv_security_center" />
+
+    <TextView
+        android:id="@+id/tv_about_us"
+        style="@style/MineItemStyle"
+        android:text="@string/about_us"
+        app:layout_constraintTop_toBottomOf="@+id/view_divider4" />
+
+    <TextView
+        android:id="@+id/tv_invite_friends"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_invite_friends"
+        android:paddingLeft="@dimen/size_24"
+        android:paddingTop="@dimen/size_8"
+        android:paddingRight="@dimen/size_24"
+        android:paddingBottom="@dimen/size_24"
+        android:text="@string/invite_friends"
+        android:textColor="@color/app_color"
+        android:textSize="@dimen/font_16"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_about_us" />
+
+    <TextView
+        android:id="@+id/tv_immediately_invited"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_app_color_24"
+        android:elevation="@dimen/size_1"
+        android:paddingLeft="@dimen/size_24"
+        android:paddingTop="@dimen/size_8"
+        android:paddingRight="@dimen/size_24"
+        android:paddingBottom="@dimen/size_8"
+        android:text="@string/immediately_invited"
+        android:textColor="@color/app_color1"
+        android:textSize="@dimen/font_16"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_invite_friends"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_invite_friends" />
+</android.support.constraint.ConstraintLayout>

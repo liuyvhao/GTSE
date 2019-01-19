@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/size_8"
+        android:background="@drawable/bg_white_solid4"
+        android:elevation="@dimen/size_2"
+        android:padding="@dimen/size_8"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/iv_goods"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintDimensionRatio="1920:1080"
+            tools:ignore="MissingConstraints" />
+
+        <TextView
+            android:id="@+id/tv_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/size_8"
+            android:ellipsize="end"
+            android:lines="2"
+            android:textColor="@color/light_black1"
+            android:textSize="@dimen/font_14"
+            app:layout_constraintTop_toBottomOf="@+id/iv_goods" />
+
+        <TextView
+            android:id="@+id/tv_price"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/size_8"
+            android:textColor="@color/light_black1"
+            android:textSize="@dimen/font_16"
+            app:layout_constraintTop_toBottomOf="@+id/tv_name" />
+
+        <com.qmuiteam.qmui.widget.roundwidget.QMUIRoundButton
+            android:id="@+id/btn_convert"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/size_8"
+            android:gravity="center"
+            android:paddingTop="@dimen/size_8"
+            android:paddingBottom="@dimen/size_8"
+            android:text="@string/convert"
+            android:textColor="@color/s_btn_app_color"
+            android:textSize="@dimen/font_14"
+            app:layout_constraintTop_toBottomOf="@+id/tv_price"
+            app:qmui_backgroundColor="@color/s_btn_app_color1"
+            app:qmui_radius="@dimen/size_4" />
+    </android.support.constraint.ConstraintLayout>
+</android.support.constraint.ConstraintLayout>

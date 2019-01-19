@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.witfrog.gtse.widget.WindowInsetConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/light_gray"
+    tools:context=".ui.order.OrderActivity">
+
+    <include layout="@layout/include_top_bar" />
+
+    <TextView
+        android:id="@+id/tv_order_mine"
+        style="@style/Padding_16_8"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/size_16"
+        android:layout_marginTop="@dimen/size_16"
+        android:layout_marginRight="@dimen/size_16"
+        android:background="@drawable/bg_app_color1_top4"
+        android:text="@string/order_mine"
+        android:textColor="@color/white"
+        android:textSize="@dimen/font_16"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/divider"
+        android:layout_marginLeft="@dimen/size_32"
+        android:layout_marginRight="@dimen/size_32"
+        android:background="@color/divider"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_order_mine" />
+
+    <TextView
+        android:id="@+id/tv_order_all"
+        style="@style/Padding_16_8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/order_all"
+        android:textColor="@color/white"
+        android:textSize="@dimen/font_16"
+        app:layout_constraintBaseline_toBaselineOf="@+id/tv_order_mine"
+        app:layout_constraintRight_toRightOf="@+id/tv_order_mine" />
+
+    <RadioGroup
+        android:id="@+id/rg_order_status"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintLeft_toLeftOf="@+id/tv_order_mine"
+        app:layout_constraintRight_toRightOf="@+id/tv_order_mine"
+        app:layout_constraintTop_toBottomOf="@+id/tv_order_mine">
+
+        <RadioButton
+            android:id="@+id/rb_status1"
+            style="@style/OrderStatusStyle"
+            android:background="@drawable/sel_order_status_left"
+            android:drawableTop="@drawable/ic_order_status1"
+            android:text="@string/order_status1" />
+
+        <RadioButton
+            android:id="@+id/rb_status2"
+            style="@style/OrderStatusStyle"
+            android:background="@drawable/sel_order_status"
+            android:drawableTop="@drawable/ic_order_status2"
+            android:text="@string/order_status2" />
+
+        <RadioButton
+            android:id="@+id/rb_status3"
+            style="@style/OrderStatusStyle"
+            android:background="@drawable/sel_order_status"
+            android:drawableTop="@drawable/ic_order_status3"
+            android:text="@string/order_status3" />
+
+        <RadioButton
+            android:id="@+id/rb_status4"
+            style="@style/OrderStatusStyle"
+            android:background="@drawable/sel_order_status_right"
+            android:drawableTop="@drawable/ic_order_status4"
+            android:text="@string/order_status4" />
+    </RadioGroup>
+
+    <com.scwang.smartrefresh.layout.SmartRefreshLayout
+        android:id="@+id/refresh_layout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="@dimen/size_16"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rg_order_status"
+        app:srlAccentColor="@color/colorAccent"
+        app:srlPrimaryColor="@color/colorPrimary">
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/tv_no_data"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/no_data"
+                android:textColor="@color/light_black2"
+                android:textSize="@dimen/font_16"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.4" />
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/recycler_view"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginLeft="@dimen/size_16"
+                android:layout_marginRight="@dimen/size_16"
+                android:overScrollMode="never"
+                android:scrollbars="none"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </android.support.constraint.ConstraintLayout>
+    </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+</com.witfrog.gtse.widget.WindowInsetConstraintLayout>

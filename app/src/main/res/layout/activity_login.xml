@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.witfrog.gtse.widget.WindowInsetConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/layout_l"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    tools:context=".ui.login.LoginActivity">
+
+    <TextView
+        android:id="@+id/tv_register"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/bar_height"
+        android:gravity="center"
+        android:paddingLeft="@dimen/size_16"
+        android:paddingRight="@dimen/size_16"
+        android:text="@string/register"
+        android:textColor="@color/light_black3"
+        android:textSize="@dimen/font_16"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/iv_logo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/size_32"
+        android:src="@drawable/ic_logo"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_register" />
+
+    <EditText
+        android:id="@+id/et_phone_number"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/size_40"
+        android:layout_marginLeft="@dimen/size_40"
+        android:layout_marginTop="@dimen/size_40"
+        android:layout_marginRight="@dimen/size_40"
+        android:background="@drawable/qmui_list_item_bg_with_border_bottom"
+        android:digits="@string/et_type_number"
+        android:drawableLeft="@drawable/ic_phone_number"
+        android:drawablePadding="@dimen/size_8"
+        android:gravity="center_vertical"
+        android:hint="@string/input_phone_number"
+        android:inputType="phone"
+        android:lines="1"
+        android:maxLength="11"
+        android:paddingLeft="@dimen/size_8"
+        android:paddingRight="@dimen/size_8"
+        android:textColor="@color/light_black1"
+        android:textSize="@dimen/font_16"
+        app:layout_constraintTop_toBottomOf="@+id/iv_logo" />
+
+    <EditText
+        android:id="@+id/et_password"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/size_40"
+        android:layout_marginLeft="@dimen/size_40"
+        android:layout_marginTop="@dimen/size_16"
+        android:layout_marginRight="@dimen/size_40"
+        android:background="@drawable/qmui_list_item_bg_with_border_bottom"
+        android:drawableLeft="@drawable/ic_password"
+        android:drawablePadding="@dimen/size_8"
+        android:gravity="center_vertical"
+        android:hint="@string/input_password"
+        android:inputType="textPassword"
+        android:lines="1"
+        android:maxLength="16"
+        android:paddingLeft="@dimen/size_8"
+        android:paddingRight="@dimen/size_8"
+        android:textColor="@color/light_black1"
+        android:textSize="@dimen/font_16"
+        app:layout_constraintTop_toBottomOf="@+id/et_phone_number" />
+
+    <ImageView
+        android:id="@+id/iv_eye"
+        android:layout_width="@dimen/size_40"
+        android:layout_height="@dimen/size_40"
+        android:scaleType="centerInside"
+        android:src="@drawable/ic_eye"
+        app:layout_constraintBottom_toBottomOf="@+id/et_password"
+        app:layout_constraintRight_toRightOf="@+id/et_password"
+        app:layout_constraintTop_toTopOf="@+id/et_password" />
+
+    <EditText
+        android:id="@+id/et_verification_code"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/size_40"
+        android:layout_marginLeft="@dimen/size_40"
+        android:layout_marginTop="@dimen/size_16"
+        android:layout_marginRight="@dimen/size_40"
+        android:background="@drawable/qmui_list_item_bg_with_border_bottom"
+        android:digits="@string/et_type_number"
+        android:drawableLeft="@drawable/ic_verification_code"
+        android:drawablePadding="@dimen/size_8"
+        android:gravity="center_vertical"
+        android:hint="@string/input_verification_code"
+        android:inputType="numberSigned"
+        android:lines="1"
+        android:maxLength="6"
+        android:paddingLeft="@dimen/size_8"
+        android:paddingRight="@dimen/size_8"
+        android:textColor="@color/light_black1"
+        android:textSize="@dimen/font_16"
+        android:visibility="gone"
+        app:layout_constraintTop_toBottomOf="@+id/et_phone_number" />
+
+    <com.qmuiteam.qmui.widget.roundwidget.QMUIRoundButton
+        android:id="@+id/btn_send"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingLeft="@dimen/size_12"
+        android:paddingTop="@dimen/size_2"
+        android:paddingRight="@dimen/size_12"
+        android:paddingBottom="@dimen/size_2"
+        android:text="@string/get_verification_code"
+        android:textColor="@color/s_btn_gray"
+        android:textSize="@dimen/font_12"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@+id/et_verification_code"
+        app:layout_constraintRight_toRightOf="@+id/et_verification_code"
+        app:layout_constraintTop_toTopOf="@+id/et_verification_code"
+        app:qmui_borderColor="@color/s_btn_gray"
+        app:qmui_borderWidth="@dimen/size_1"
+        app:qmui_radius="@dimen/size_16" />
+
+    <TextView
+        android:id="@+id/tv_login"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/size_40"
+        android:layout_marginLeft="@dimen/size_40"
+        android:layout_marginTop="@dimen/size_96"
+        android:layout_marginRight="@dimen/size_40"
+        android:background="@drawable/sel_btn_gradient_golden"
+        android:elevation="@dimen/size_4"
+        android:gravity="center"
+        android:text="@string/login"
+        android:textColor="@color/white"
+        android:textSize="@dimen/font_18"
+        app:layout_constraintTop_toBottomOf="@+id/et_phone_number" />
+
+    <TextView
+        android:id="@+id/tv_forget_password"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:drawableRight="@drawable/ic_right_golden"
+        android:gravity="center_vertical"
+        android:text="@string/forget_password"
+        android:textColor="@color/golden"
+        android:textSize="@dimen/font_14"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_login_mode"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/view_divider"
+        app:layout_constraintTop_toTopOf="@+id/tv_login_mode" />
+
+    <View
+        android:id="@+id/view_divider"
+        android:layout_width="@dimen/size_1"
+        android:layout_height="0dp"
+        android:layout_marginLeft="@dimen/size_4"
+        android:layout_marginRight="@dimen/size_4"
+        android:background="@color/golden"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_login_mode"
+        app:layout_constraintLeft_toRightOf="@+id/tv_forget_password"
+        app:layout_constraintRight_toLeftOf="@+id/tv_login_mode"
+        app:layout_constraintTop_toTopOf="@+id/tv_login_mode" />
+
+    <TextView
+        android:id="@+id/tv_login_mode"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/size_16"
+        android:drawableRight="@drawable/ic_right_golden"
+        android:gravity="center_vertical"
+        android:text="@string/verification_code_login"
+        android:textColor="@color/golden"
+        android:textSize="@dimen/font_14"
+        app:layout_constraintLeft_toRightOf="@+id/view_divider"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_login" />
+
+    <View
+        android:layout_width="0dp"
+        android:layout_height="@dimen/divider"
+        android:layout_marginLeft="@dimen/size_16"
+        android:background="@color/divider"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_agree"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/tv_agree"
+        app:layout_constraintTop_toTopOf="@+id/tv_agree" />
+
+    <TextView
+        android:id="@+id/tv_agree"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/size_16"
+        android:text="@string/agree"
+        android:textColor="@color/light_black3"
+        android:textSize="@dimen/font_14"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/tv_terms" />
+
+    <TextView
+        android:id="@+id/tv_terms"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/terms"
+        android:textColor="@color/golden"
+        android:textSize="@dimen/font_14"
+        app:layout_constraintBaseline_toBaselineOf="@+id/tv_agree"
+        app:layout_constraintLeft_toRightOf="@+id/tv_agree"
+        app:layout_constraintRight_toRightOf="parent" />
+
+    <View
+        android:layout_width="0dp"
+        android:layout_height="@dimen/divider"
+        android:layout_marginRight="@dimen/size_16"
+        android:background="@color/divider"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_agree"
+        app:layout_constraintLeft_toRightOf="@+id/tv_terms"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/tv_agree" />
+</com.witfrog.gtse.widget.WindowInsetConstraintLayout>

@@ -1,0 +1,319 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/light_gray">
+
+    <TextView
+        android:id="@+id/tv_exchange_rmb"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/size_16"
+        android:layout_marginTop="@dimen/size_32"
+        android:layout_marginRight="@dimen/size_16"
+        android:text="@string/exchange_rmb"
+        android:textColor="@color/light_black"
+        android:textSize="@dimen/font_16"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/tv_exchange_dollar"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_exchange_dollar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="@dimen/size_16"
+        android:text="@string/exchange_dollar"
+        android:textColor="@color/light_black"
+        android:textSize="@dimen/font_16"
+        app:layout_constraintBaseline_toBaselineOf="@+id/tv_exchange_rmb"
+        app:layout_constraintLeft_toRightOf="@+id/tv_exchange_rmb"
+        app:layout_constraintRight_toLeftOf="@+id/btn_transaction" />
+
+    <com.qmuiteam.qmui.widget.roundwidget.QMUIRoundButton
+        android:id="@+id/btn_transaction"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="@dimen/size_8"
+        android:paddingLeft="@dimen/size_16"
+        android:paddingTop="@dimen/size_1"
+        android:paddingRight="@dimen/size_16"
+        android:paddingBottom="@dimen/size_1"
+        android:text="@string/transaction"
+        android:textColor="@color/white"
+        android:textSize="@dimen/font_16"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_exchange_rmb"
+        app:layout_constraintRight_toLeftOf="@+id/btn_wallet"
+        app:layout_constraintTop_toTopOf="@+id/tv_exchange_rmb"
+        app:qmui_backgroundColor="@color/s_btn_6974df"
+        app:qmui_radius="@dimen/size_4" />
+
+    <com.qmuiteam.qmui.widget.roundwidget.QMUIRoundButton
+        android:id="@+id/btn_wallet"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="@dimen/size_32"
+        android:paddingLeft="@dimen/size_16"
+        android:paddingTop="@dimen/size_1"
+        android:paddingRight="@dimen/size_16"
+        android:paddingBottom="@dimen/size_1"
+        android:text="@string/wallet"
+        android:textColor="@color/white"
+        android:textSize="@dimen/font_16"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_exchange_rmb"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/tv_exchange_rmb"
+        app:qmui_backgroundColor="@color/s_btn_6974df"
+        app:qmui_radius="@dimen/size_4" />
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/layout_wallet_left"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/size_16"
+        android:layout_marginTop="@dimen/size_32"
+        android:layout_marginRight="@dimen/size_8"
+        android:background="@drawable/bg_white_solid4"
+        android:elevation="@dimen/size_4"
+        android:padding="@dimen/size_16"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/layout_wallet_right"
+        app:layout_constraintTop_toBottomOf="@+id/tv_exchange_rmb">
+
+        <TextView
+            android:id="@+id/tv_yesterday_rose"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/yesterday_rose"
+            android:textColor="@color/text_43436a"
+            android:textSize="@dimen/font_14"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_yesterday_rose_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/text_43436a"
+            android:textSize="@dimen/font_14"
+            app:layout_constraintBaseline_toBaselineOf="@+id/tv_yesterday_rose"
+            app:layout_constraintRight_toRightOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_today_highest"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/size_8"
+            android:text="@string/today_highest"
+            android:textColor="@color/text_43436a"
+            android:textSize="@dimen/font_14"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_yesterday_rose" />
+
+        <TextView
+            android:id="@+id/tv_today_highest_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/text_43436a"
+            android:textSize="@dimen/font_14"
+            app:layout_constraintBaseline_toBaselineOf="@+id/tv_today_highest"
+            app:layout_constraintRight_toRightOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_today_lowest"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/size_8"
+            android:text="@string/today_lowest"
+            android:textColor="@color/text_43436a"
+            android:textSize="@dimen/font_14"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_today_highest" />
+
+        <TextView
+            android:id="@+id/tv_today_lowest_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/text_43436a"
+            android:textSize="@dimen/font_14"
+            app:layout_constraintBaseline_toBaselineOf="@+id/tv_today_lowest"
+            app:layout_constraintRight_toRightOf="parent" />
+    </android.support.constraint.ConstraintLayout>
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/layout_wallet_right"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/size_8"
+        android:layout_marginRight="@dimen/size_16"
+        android:background="@drawable/bg_white_solid4"
+        android:elevation="@dimen/size_4"
+        android:padding="@dimen/size_16"
+        app:layout_constraintBottom_toBottomOf="@+id/layout_wallet_left"
+        app:layout_constraintLeft_toRightOf="@+id/layout_wallet_left"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/layout_wallet_left">
+
+        <TextView
+            android:id="@+id/tv_market_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/market_value"
+            android:textColor="@color/text_43436a"
+            android:textSize="@dimen/font_14"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_market_value_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/text_43436a"
+            android:textSize="@dimen/font_14"
+            app:layout_constraintBaseline_toBaselineOf="@+id/tv_market_value"
+            app:layout_constraintRight_toRightOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_quantity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/size_8"
+            android:text="@string/quantity"
+            android:textColor="@color/text_43436a"
+            android:textSize="@dimen/font_14"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_market_value" />
+
+        <TextView
+            android:id="@+id/tv_quantity_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/text_43436a"
+            android:textSize="@dimen/font_14"
+            app:layout_constraintBaseline_toBaselineOf="@+id/tv_quantity"
+            app:layout_constraintRight_toRightOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_amount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/size_8"
+            android:text="@string/amount"
+            android:textColor="@color/text_43436a"
+            android:textSize="@dimen/font_14"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_quantity" />
+
+        <TextView
+            android:id="@+id/tv_amount_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/text_43436a"
+            android:textSize="@dimen/font_14"
+            app:layout_constraintBaseline_toBaselineOf="@+id/tv_amount"
+            app:layout_constraintRight_toRightOf="parent" />
+    </android.support.constraint.ConstraintLayout>
+
+    <View
+        android:id="@+id/view_bg_chart_top"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/size_48"
+        android:layout_marginTop="@dimen/size_32"
+        android:background="@drawable/qmui_list_item_bg_with_double_border"
+        app:layout_constraintTop_toBottomOf="@+id/layout_wallet_left" />
+
+    <TextView
+        android:id="@+id/tv_increase"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/size_32"
+        android:text="@string/increase"
+        android:textColor="@color/light_black1"
+        android:textSize="@dimen/font_16"
+        app:layout_constraintBottom_toBottomOf="@+id/view_bg_chart_top"
+        app:layout_constraintHorizontal_chainStyle="spread_inside"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/tv_day"
+        app:layout_constraintTop_toTopOf="@+id/view_bg_chart_top" />
+
+    <TextView
+        android:id="@+id/tv_day"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:gravity="center"
+        android:text="@string/day"
+        android:textColor="@color/light_black1"
+        android:textSize="@dimen/font_16"
+        app:layout_constraintBottom_toBottomOf="@+id/view_bg_chart_top"
+        app:layout_constraintLeft_toRightOf="@+id/tv_increase"
+        app:layout_constraintRight_toLeftOf="@+id/tv_week"
+        app:layout_constraintTop_toTopOf="@+id/view_bg_chart_top" />
+
+    <TextView
+        android:id="@+id/tv_week"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:gravity="center"
+        android:text="@string/week"
+        android:textColor="@color/light_black1"
+        android:textSize="@dimen/font_16"
+        app:layout_constraintBottom_toBottomOf="@+id/view_bg_chart_top"
+        app:layout_constraintLeft_toRightOf="@+id/tv_day"
+        app:layout_constraintRight_toLeftOf="@+id/tv_month"
+        app:layout_constraintTop_toTopOf="@+id/view_bg_chart_top" />
+
+    <TextView
+        android:id="@+id/tv_month"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:gravity="center"
+        android:text="@string/month"
+        android:textColor="@color/light_black1"
+        android:textSize="@dimen/font_16"
+        app:layout_constraintBottom_toBottomOf="@+id/view_bg_chart_top"
+        app:layout_constraintLeft_toRightOf="@+id/tv_week"
+        app:layout_constraintRight_toLeftOf="@+id/tv_all"
+        app:layout_constraintTop_toTopOf="@+id/view_bg_chart_top" />
+
+    <TextView
+        android:id="@+id/tv_all"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:gravity="center"
+        android:text="@string/all"
+        android:textColor="@color/light_black1"
+        android:textSize="@dimen/font_16"
+        app:layout_constraintBottom_toBottomOf="@+id/view_bg_chart_top"
+        app:layout_constraintLeft_toRightOf="@+id/tv_month"
+        app:layout_constraintRight_toLeftOf="@+id/btn_more"
+        app:layout_constraintTop_toTopOf="@+id/view_bg_chart_top" />
+
+    <com.qmuiteam.qmui.widget.roundwidget.QMUIRoundButton
+        android:id="@+id/btn_more"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="@dimen/size_32"
+        android:paddingLeft="@dimen/size_16"
+        android:paddingTop="@dimen/size_1"
+        android:paddingRight="@dimen/size_16"
+        android:paddingBottom="@dimen/size_1"
+        android:text="@string/more"
+        android:textColor="@color/white"
+        android:textSize="@dimen/font_14"
+        app:layout_constraintBottom_toBottomOf="@+id/view_bg_chart_top"
+        app:layout_constraintLeft_toRightOf="@+id/tv_all"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/view_bg_chart_top"
+        app:qmui_backgroundColor="@color/s_btn_6974df"
+        app:qmui_radius="@dimen/size_4" />
+
+    <com.github.mikephil.charting.charts.LineChart
+        android:id="@+id/line_chart"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginBottom="@dimen/size_32"
+        android:background="@drawable/qmui_list_item_bg_with_border_bottom"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view_bg_chart_top" />
+</android.support.constraint.ConstraintLayout>

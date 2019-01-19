@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.witfrog.gtse.widget.WindowInsetConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.home.HomeActivity">
+
+    <include layout="@layout/include_top_bar" />
+
+    <FrameLayout
+        android:id="@+id/fragment_container"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@color/light_gray"
+        app:layout_constraintBottom_toTopOf="@+id/radio_group"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar" />
+
+    <RadioGroup
+        android:id="@+id/radio_group"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/qmui_list_item_bg_with_border_top"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/fragment_container">
+
+        <RadioButton
+            android:id="@+id/rb_tab0"
+            style="@style/HomeTabStyle"
+            android:drawableTop="@drawable/sel_home_tab0"
+            android:text="@string/tab_text0" />
+
+        <RadioButton
+            android:id="@+id/rb_tab1"
+            style="@style/HomeTabStyle"
+            android:drawableTop="@drawable/sel_home_tab1"
+            android:text="@string/tab_text1" />
+
+        <RadioButton
+            android:id="@+id/rb_tab2"
+            style="@style/HomeTabStyle"
+            android:drawableTop="@drawable/sel_home_tab2"
+            android:text="@string/tab_text2" />
+
+        <RadioButton
+            android:id="@+id/rb_tab3"
+            style="@style/HomeTabStyle"
+            android:drawableTop="@drawable/sel_home_tab3"
+            android:text="@string/tab_text3" />
+    </RadioGroup>
+</com.witfrog.gtse.widget.WindowInsetConstraintLayout>

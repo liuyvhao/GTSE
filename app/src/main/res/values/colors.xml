@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">@color/app_color</color>
+    <color name="colorPrimaryDark">@color/app_color</color>
+    <color name="colorAccent">@color/app_color</color>
+
+    <color name="app_color">#ffda7c</color>
+    <color name="app_color_pressed">#a0ffda7c</color>
+    <color name="app_color1">#1c1c3a</color>
+    <color name="app_color1_pressed">#a01c1c3a</color>
+
+    <color name="light_gray">#f2f2f2</color>
+    <color name="light_gray1">#e1e1e1</color>
+    <color name="light_gray2">#bababa</color>
+    <color name="light_black3">#999999</color>
+    <color name="light_black2">#666666</color>
+    <color name="light_black1">#333333</color>
+    <color name="light_black">#191919</color>
+
+    <color name="black_alpha_75">#bf000000</color>
+    <color name="black_alpha_50">#80000000</color>
+    <color name="black_alpha_25">#40000000</color>
+
+    <color name="white_alpha_10">#1Affffff</color>
+    <color name="white">#ffffff</color>
+
+    <color name="divider">@color/light_gray</color>
+
+    <color name="bg_layout">#43436a</color>
+
+    <color name="golden">#e49234</color>
+
+    <color name="text_43436a">#43436a</color>
+    <color name="text_6974df">#6974df</color>
+</resources>

@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.witfrog.gtse.widget.WindowInsetConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/light_gray"
+    tools:context=".ui.shop.commodity.CommodityActivity">
+
+    <include layout="@layout/include_top_bar" />
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/cl_top"
+        android:layout_width="match_parent"
+        android:layout_height="270dp"
+        android:layout_marginLeft="@dimen/size_16"
+        android:layout_marginTop="@dimen/size_24"
+        android:layout_marginRight="@dimen/size_16"
+        android:background="@drawable/bg_white_solid4"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar">
+
+        <com.bigkoo.convenientbanner.ConvenientBanner
+            android:id="@+id/convenient_banner"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginLeft="@dimen/font_16"
+            android:layout_marginRight="@dimen/font_16"
+            android:layout_marginTop="@dimen/font_16"
+            app:autoTurningTime="3000"
+            android:background="@color/light_black3"
+            app:canLoop="true"
+            app:layout_constraintDimensionRatio="1920:1080"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/font_12"
+            android:text="@string/shop_name"
+            android:textColor="@color/light_black"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/convenient_banner" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/size_4"
+            android:text="@string/shop_integral"
+            android:textColor="@color/s_btn_app_color"
+            android:textSize="@dimen/font_16"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_name" />
+
+    </android.support.constraint.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/tv_text0"
+        android:layout_width="match_parent"
+        android:layout_height="38dp"
+        android:layout_marginLeft="@dimen/size_16"
+        android:layout_marginTop="@dimen/size_16"
+        android:layout_marginRight="@dimen/size_16"
+        android:background="@drawable/bg_white_solid4"
+        android:gravity="center_vertical"
+        android:paddingLeft="@dimen/size_16"
+        android:drawableRight="@drawable/shop_menu"
+        android:paddingRight="@dimen/font_16"
+        android:text="@string/shop_text0"
+        android:textColor="@color/black_alpha_75"
+        android:textSize="@dimen/font_14"
+        app:layout_constraintTop_toBottomOf="@id/cl_top" />
+
+    <TextView
+        android:id="@+id/tv_text1"
+        android:layout_width="match_parent"
+        android:layout_height="38dp"
+        android:layout_marginLeft="@dimen/size_16"
+        android:layout_marginTop="@dimen/size_16"
+        android:layout_marginRight="@dimen/size_16"
+        android:background="@drawable/bg_white_solid4"
+        android:gravity="center_vertical"
+        android:drawableRight="@drawable/shop_menu"
+        android:paddingRight="@dimen/font_16"
+        android:paddingLeft="@dimen/size_16"
+        android:text="@string/shop_text1"
+        android:textColor="@color/black_alpha_75"
+        android:textSize="@dimen/font_14"
+        app:layout_constraintTop_toBottomOf="@id/tv_text0" />
+
+    <com.qmuiteam.qmui.widget.roundwidget.QMUIRoundButton
+        android:id="@+id/btn_convert"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:layout_marginLeft="@dimen/size_48"
+        android:layout_marginRight="@dimen/size_48"
+        android:layout_marginBottom="@dimen/size_8"
+        android:gravity="center"
+        android:text="@string/convert"
+        android:textColor="@color/s_btn_app_color"
+        android:textSize="@dimen/font_18"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:qmui_backgroundColor="@color/s_btn_app_color1"
+        app:qmui_radius="@dimen/size_4" />
+
+</com.witfrog.gtse.widget.WindowInsetConstraintLayout>
