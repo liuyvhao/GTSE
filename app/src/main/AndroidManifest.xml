@@ -95,7 +95,9 @@
             android:launchMode="singleTop"
             android:windowSoftInputMode="stateAlwaysHidden|adjustPan" />
         <activity android:name=".ui.shop.commodity.CommodityActivity" />
-        <activity android:name=".ui.shop.order.ConfirmOrderActivity"></activity>
+        <activity android:name=".ui.shop.order.ConfirmOrderActivity" />
+        <activity android:name=".ui.shop.tourism.TourismActivity" />
+        <activity android:name=".ui.shop.product.ProductActivity"></activity>
     </application>
 
 </manifest>

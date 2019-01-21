@@ -18,6 +18,7 @@ import com.witfrog.gtse.model.Product;
 import com.witfrog.gtse.model.PageData;
 import com.witfrog.gtse.ui.home.HomeActivity;
 import com.witfrog.gtse.ui.shop.commodity.CommodityActivity;
+import com.witfrog.gtse.ui.shop.tourism.TourismActivity;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -76,7 +77,8 @@ public class Home0Fragment extends BaseFragment implements OnItemClickListener {
 
     @Override
     public void onItemClick(View view, int position) {
-        CommodityActivity.start(mActivity);
+//        CommodityActivity.start(mActivity);
+        TourismActivity.start(mActivity);
     }
 
     @Override

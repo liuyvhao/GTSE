@@ -144,11 +144,20 @@
 
     <string name="my_invitation">我的邀请</string>
     <string name="shop_name">Royal latex泰国皇家乳胶枕头</string>
+    <string name="tourise_name">《泰国巴厘岛5日游》蓝梦岛环岛，快艇出海浮潜恶魔眼泪海边秋海上独木舟，游泳酒店，24小时管家服务</string>
     <string name="shop_integral">3000积分</string>
     <string name="shop_text0">查看尺码和颜色</string>r
     <string name="shop_text1">产品参数</string>
+    <string name="tourise_text0">产品特色</string>r
+    <string name="tourise_text1_info">快艇出海环岛，泳池酒店，天天出发，余位充足，管家服务贴心护航！</string>
+    <string name="tourise_text1">出发城市：全国</string>
+    <string name="tourise_text3">选择出游人数和日期</string>
+    <string name="tourise_text4">签注/签证</string>
+    <string name="tourise_text5">出行警告</string>
 
     <string name="confirm_order">确认订单</string>
     <string name="repurchase">立即换购</string>
+
+    <string name="select_product">选择产品</string>
 
 </resources>

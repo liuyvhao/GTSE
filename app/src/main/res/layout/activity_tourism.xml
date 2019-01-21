@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.witfrog.gtse.widget.WindowInsetConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/light_gray"
+    tools:context=".ui.shop.tourism.TourismActivity">
+
+    <include layout="@layout/include_top_bar" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/size_72">
+
+        <android.support.constraint.ConstraintLayout
+            android:id="@+id/cl_bottom"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_alignParentBottom="true">
+
+            <com.qmuiteam.qmui.widget.roundwidget.QMUIRoundButton
+                android:id="@+id/btn_convert"
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:layout_marginLeft="@dimen/size_48"
+                android:layout_marginRight="@dimen/size_48"
+                android:layout_marginBottom="@dimen/size_8"
+                android:gravity="center"
+                android:text="@string/convert"
+                android:textColor="@color/s_btn_app_color"
+                android:textSize="@dimen/font_18"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:qmui_backgroundColor="@color/s_btn_app_color1"
+                app:qmui_radius="@dimen/size_4" />
+        </android.support.constraint.ConstraintLayout>
+
+        <android.support.v4.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/cl_bottom"
+            android:layout_marginBottom="@dimen/size_4"
+            android:overScrollMode="never">
+
+            <android.support.constraint.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <android.support.constraint.ConstraintLayout
+                    android:id="@+id/cl_top"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/size_16"
+                    android:layout_marginTop="@dimen/size_24"
+                    android:layout_marginRight="@dimen/size_16"
+                    android:background="@drawable/bg_white_solid4"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <com.bigkoo.convenientbanner.ConvenientBanner
+                        android:id="@+id/convenient_banner"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_marginLeft="@dimen/font_16"
+                        android:layout_marginTop="@dimen/font_16"
+                        android:layout_marginRight="@dimen/font_16"
+                        android:background="@color/light_black3"
+                        app:autoTurningTime="3000"
+                        app:canLoop="true"
+                        app:layout_constraintDimensionRatio="1920:1080"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/tv_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/font_12"
+                        android:paddingLeft="@dimen/font_16"
+                        android:paddingRight="@dimen/font_16"
+                        android:text="@string/tourise_name"
+                        android:textColor="@color/light_black"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/convenient_banner" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/size_4"
+                        android:paddingBottom="15dp"
+                        android:text="@string/shop_integral"
+                        android:textColor="@color/s_btn_app_color"
+                        android:textSize="@dimen/font_16"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/tv_name" />
+
+                </android.support.constraint.ConstraintLayout>
+
+                <android.support.constraint.ConstraintLayout
+                    android:id="@+id/cl_1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/font_16"
+                    android:layout_marginTop="@dimen/font_10"
+                    android:layout_marginRight="@dimen/font_16"
+                    android:background="@drawable/bg_white_solid4"
+                    app:layout_constraintTop_toBottomOf="@id/cl_top">
+
+                    <TextView
+                        android:id="@+id/tv_title1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/font_16"
+                        android:layout_marginTop="@dimen/font_10"
+                        android:text="@string/tourise_text0"
+                        android:textColor="@color/light_black"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="7dp"
+                        android:paddingLeft="@dimen/font_16"
+                        android:paddingRight="@dimen/size_90"
+                        android:paddingBottom="@dimen/font_10"
+                        android:text="@string/tourise_text1_info"
+                        android:textColor="@color/light_black"
+                        app:layout_constraintTop_toBottomOf="@id/tv_title1" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="@dimen/font_16"
+                        android:src="@drawable/ic_right"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                </android.support.constraint.ConstraintLayout>
+
+                <TextView
+                    android:id="@+id/tv_2"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/size_40"
+                    android:layout_marginLeft="@dimen/font_16"
+                    android:layout_marginTop="@dimen/font_10"
+                    android:layout_marginRight="@dimen/font_16"
+                    android:background="@drawable/bg_white_solid4"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="@dimen/font_16"
+                    android:text="@string/tourise_text1"
+                    android:textColor="@color/light_black"
+                    app:layout_constraintTop_toBottomOf="@id/cl_1" />
+
+                <TextView
+                    android:id="@+id/tv_3"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/size_40"
+                    android:layout_marginLeft="@dimen/font_16"
+                    android:layout_marginTop="@dimen/font_10"
+                    android:layout_marginRight="@dimen/font_16"
+                    android:background="@drawable/bg_white_solid4"
+                    android:drawableRight="@drawable/shop_menu"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="@dimen/font_16"
+                    android:paddingRight="@dimen/font_16"
+                    android:text="@string/tourise_text3"
+                    android:textColor="@color/light_black"
+                    app:layout_constraintTop_toBottomOf="@id/tv_2" />
+
+                <android.support.constraint.ConstraintLayout
+                    android:id="@+id/cl_4"
+                    android:layout_width="match_parent"
+                    android:layout_height="300dp"
+                    android:layout_marginLeft="@dimen/font_16"
+                    android:layout_marginTop="@dimen/font_10"
+                    android:layout_marginRight="@dimen/font_16"
+                    android:background="@drawable/bg_white_solid4"
+                    app:layout_constraintTop_toBottomOf="@id/tv_3">
+
+                    <com.androidkun.xtablayout.XTabLayout
+                        android:id="@+id/tabLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_marginTop="1dp"
+                        app:xTabIndicatorColor="@color/light_black1"
+                        app:xTabIndicatorWidth="@dimen/size_60"
+                        app:xTabSelectedTextColor="@color/light_black1"
+                        app:xTabSelectedTextSize="@dimen/font_14"
+                        app:xTabTextColor="@color/light_black1"
+                        app:xTabTextSize="@dimen/font_14" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@drawable/divider_white_gray"
+                        app:layout_constraintTop_toBottomOf="@id/tabLayout" />
+
+                    <android.support.v4.view.ViewPager
+                        android:id="@+id/viewPager"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintTop_toBottomOf="@id/tabLayout" />
+                </android.support.constraint.ConstraintLayout>
+
+                <TextView
+                    android:id="@+id/tv_5"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/size_40"
+                    android:layout_marginLeft="@dimen/font_16"
+                    android:layout_marginTop="@dimen/font_10"
+                    android:layout_marginRight="@dimen/font_16"
+                    android:background="@drawable/bg_white_solid4"
+                    android:drawableRight="@drawable/ic_right"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="@dimen/font_16"
+                    android:paddingRight="@dimen/font_16"
+                    android:text="@string/tourise_text4"
+                    android:textColor="@color/light_black"
+                    app:layout_constraintTop_toBottomOf="@id/cl_4" />
+                <TextView
+                    android:id="@+id/tv_6"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/size_40"
+                    android:layout_marginLeft="@dimen/font_16"
+                    android:layout_marginTop="@dimen/font_10"
+                    android:layout_marginRight="@dimen/font_16"
+                    android:background="@drawable/bg_white_solid4"
+                    android:drawableRight="@drawable/ic_right"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="@dimen/font_16"
+                    android:paddingRight="@dimen/font_16"
+                    android:text="@string/tourise_text5"
+                    android:textColor="@color/light_black"
+                    app:layout_constraintTop_toBottomOf="@id/tv_5" />
+            </android.support.constraint.ConstraintLayout>
+        </android.support.v4.widget.NestedScrollView>
+    </RelativeLayout>
+</com.witfrog.gtse.widget.WindowInsetConstraintLayout>
